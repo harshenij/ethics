@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Ethics in Preventing Dataset Bias in Global Medical AI Development</title>
+  <meta name="description" content="A comprehensive educational platform on engineering ethics, dataset bias prevention, and algorithmic fairness in global healthcare AI development.">
+  <meta name="theme-color" content="#050a18">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress" role="progressbar" aria-label="Reading progress"></div>
+
+  <!-- ========================================================================
+       2. Navigation Bar
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="#home" class="logo" aria-label="Ethical Med-AI Homepage">
+        <div class="logo-icon">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <div class="logo-text">
+          <span>ETHICAL MED-AI</span>
+          <span>Global Healthcare Ethics</span>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#introduction" class="nav-link">Introduction</a>
+        <a href="#dataset-bias" class="nav-link">Dataset Bias</a>
+        <a href="#engineering-ethics" class="nav-link">Engineering Ethics</a>
+        <a href="#global-challenges" class="nav-link">Global Challenges</a>
+        <a href="#ethical-solutions" class="nav-link">Ethical Solutions</a>
+        <a href="#case-studies" class="nav-link">Case Studies</a>
+        <a href="#conclusion" class="nav-link">Conclusion</a>
+      </nav>
+
+      <!-- Nav Actions: Theme Toggle & Simulator Shortcut -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <i id="theme-icon" class="fa-solid fa-sun"></i>
+        </button>
+
+        <a href="#fairness-simulator" class="btn btn-primary btn-sm btn-sim" style="font-size: 0.85rem; padding: 0.5rem 1rem;">
+          <i class="fa-solid fa-sliders"></i> Simulator
+        </a>
+
+        <!-- Mobile Drawer Hamburger Toggle -->
+        <button class="nav-mobile-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         3. Home Page / Hero Section
+         ======================================================================== -->
+    <section class="hero-section" id="home">
+      <!-- Ambient Canvas Particles -->
+      <canvas id="hero-canvas" class="hero-bg-canvas"></canvas>
+
+      <div class="container hero-grid">
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <div class="hero-tag">
+            <i class="fa-solid fa-shield-halved"></i> Global Healthcare & AI Ethics Initiative
+          </div>
+
+          <h1 class="hero-title">
+            Engineering Ethics in Preventing <span class="gradient-text">Dataset Bias</span> in Global Medical AI Development
+          </h1>
+
+          <p class="hero-subtitle">
+            Building Fair, Transparent, Inclusive and Responsible Artificial Intelligence for Global Healthcare.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#introduction" class="btn btn-primary">
+              <i class="fa-solid fa-compass"></i> Explore the Topic
+            </a>
+            <a href="#fairness-simulator" class="btn btn-secondary">
+              <i class="fa-solid fa-microchip"></i> Launch Fairness Simulator
+            </a>
+            <a href="#ethics-quiz" class="btn btn-secondary">
+              <i class="fa-solid fa-clipboard-question"></i> Ethics Quiz
+            </a>
+          </div>
+
+          <!-- Animated Statistics Counters -->
+          <div class="hero-stats-grid" aria-label="Key Medical AI Bias Statistics">
+            <div class="hero-stat-card">
+              <div class="stat-value" id="stat-hic">81.4%</div>
+              <div class="stat-label">AI training data concentrated in only 3 wealthy regions</div>
+            </div>
+
+            <div class="hero-stat-card">
+              <div class="stat-value" id="stat-lmic">&lt;2.8%</div>
+              <div class="stat-label">Representation of developing world patient populations</div>
+            </div>
+
+            <div class="hero-stat-card">
+              <div class="stat-value" id="stat-gap">4.8x</div>
+              <div class="stat-label">False-negative error multiplier on underrepresented skin tones</div>
+            </div>
+
+            <div class="hero-stat-card">
+              <div class="stat-value" id="stat-parity">99.2%</div>
+              <div class="stat-label">Diagnostic parity achievable via ethical debiasing protocols</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Illustration -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-visual-card">
+            <!-- Scalable Healthcare AI Vector Illustration -->
+            <svg class="hero-visual-svg" viewBox="0 0 540 460" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of doctors, diverse patients, and ethical medical AI neural networks">
+              <defs>
+                <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#0f1b3b"/>
+                  <stop offset="100%" stop-color="#080e21"/>
+                </linearGradient>
+                <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#22d3ee"/>
+                  <stop offset="100%" stop-color="#0284c7"/>
+                </linearGradient>
+                <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#c084fc"/>
+                  <stop offset="100%" stop-color="#7c3aed"/>
+                </linearGradient>
+                <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="8" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+
+              <!-- Card Background -->
+              <rect width="540" height="460" rx="20" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.08)"/>
+
+              <!-- Holographic Grid Lines -->
+              <path d="M 40 100 L 500 100 M 40 180 L 500 180 M 40 260 L 500 260 M 40 340 L 500 340" stroke="rgba(6,182,212,0.12)" stroke-dasharray="4 4"/>
+              <path d="M 120 40 L 120 420 M 270 40 L 270 420 M 420 40 L 420 420" stroke="rgba(139,92,246,0.1)" stroke-dasharray="4 4"/>
+
+              <!-- Central Medical Neural Core -->
+              <circle cx="270" cy="210" r="85" fill="rgba(6,182,212,0.06)" stroke="url(#cyanGrad)" stroke-width="2" filter="url(#glowFilter)"/>
+              <circle cx="270" cy="210" r="58" fill="rgba(139,92,246,0.12)" stroke="url(#purpleGrad)" stroke-width="1.5"/>
+
+              <!-- Neural Network Synapses -->
+              <line x1="270" y1="152" x2="270" y2="85" stroke="url(#cyanGrad)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="220" y1="245" x2="140" y2="300" stroke="url(#cyanGrad)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="320" y1="245" x2="400" y2="300" stroke="url(#purpleGrad)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="215" y1="180" x2="130" y2="150" stroke="rgba(34,211,238,0.5)" stroke-width="1.5" stroke-dasharray="3 3"/>
+              <line x1="325" y1="180" x2="410" y2="150" stroke="rgba(192,132,252,0.5)" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+              <!-- Central Caduceus / Health AI Icon -->
+              <path d="M 270 180 L 270 240 M 255 195 C 265 185, 275 185, 285 195 C 275 205, 265 205, 255 215 C 265 225, 275 225, 285 235" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="270" cy="175" r="5" fill="#22d3ee"/>
+
+              <!-- Doctor Figure (Left Node) -->
+              <g transform="translate(90, 270)">
+                <circle cx="35" cy="25" r="18" fill="url(#cyanGrad)"/>
+                <!-- Stethoscope & Coat -->
+                <path d="M 12 70 C 12 45, 58 45, 58 70 Z" fill="#ffffff" opacity="0.9"/>
+                <path d="M 28 44 C 28 55, 42 55, 42 44" stroke="#0891b2" stroke-width="2.5" fill="none"/>
+                <!-- Title Pill -->
+                <rect x="-10" y="78" width="90" height="22" rx="11" fill="rgba(6,182,212,0.2)" stroke="rgba(6,182,212,0.5)"/>
+                <text x="35" y="93" fill="#22d3ee" font-size="10" font-weight="bold" text-anchor="middle" font-family="sans-serif">CLINICIAN</text>
+              </g>
+
+              <!-- Patient Diversity Figure (Right Node) -->
+              <g transform="translate(380, 270)">
+                <circle cx="35" cy="25" r="18" fill="#e0a96d"/>
+                <path d="M 12 70 C 12 48, 58 48, 58 70 Z" fill="url(#purpleGrad)"/>
+                <!-- Title Pill -->
+                <rect x="-15" y="78" width="100" height="22" rx="11" fill="rgba(139,92,246,0.2)" stroke="rgba(139,92,246,0.5)"/>
+                <text x="35" y="93" fill="#c084fc" font-size="10" font-weight="bold" text-anchor="middle" font-family="sans-serif">DIVERSE COHORT</text>
+              </g>
+
+              <!-- AI Neural Node (Top Node) -->
+              <g transform="translate(235, 45)">
+                <circle cx="35" cy="25" r="18" fill="rgba(6,182,212,0.25)" stroke="#22d3ee" stroke-width="2"/>
+                <path d="M 27 25 L 43 25 M 35 17 L 35 33" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round"/>
+                <rect x="-10" y="50" width="90" height="20" rx="10" fill="rgba(15,25,54,0.9)" stroke="rgba(34,211,238,0.4)"/>
+                <text x="35" y="64" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle" font-family="sans-serif">FAIR MODEL</text>
+              </g>
+
+              <!-- Holographic ECG Pulse Line across center -->
+              <path d="M 60 390 L 170 390 L 185 370 L 195 410 L 210 360 L 225 415 L 235 390 L 480 390" stroke="url(#cyanGrad)" stroke-width="2" fill="none" opacity="0.8"/>
+            </svg>
+
+            <!-- Floating Badge 1: Fairness Verified -->
+            <div class="floating-badge floating-badge-1">
+              <i class="fa-solid fa-check-double" style="color: var(--color-emerald);"></i>
+              <span>Bias Testing Verified</span>
+            </div>
+
+            <!-- Floating Badge 2: Global Inclusion -->
+            <div class="floating-badge floating-badge-2">
+              <i class="fa-solid fa-globe" style="color: var(--color-purple-light);"></i>
+              <span>Global Cohort Inclusion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. Introduction Section
+         ======================================================================== -->
+    <section class="section" id="introduction">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <i class="fa-solid fa-dna"></i> Transformational Technology
+          </div>
+          <h2 class="section-title">
+            How Artificial Intelligence is <span class="gradient-text">Transforming Healthcare</span>
+          </h2>
+          <p class="section-subtitle">
+            From precision radiology to genomic therapeutics, machine learning promises unprecedented clinical breakthroughs. But without rigorous engineering ethics, these algorithms risk codifying historical inequities.
+          </p>
+        </div>
+
+        <!-- 5 Pillars of Healthcare AI -->
+        <div class="intro-grid">
+          <!-- Pillar 1 -->
+          <div class="glass-card intro-card">
+            <div class="intro-icon">
+              <i class="fa-solid fa-virus"></i>
+            </div>
+            <h3>Disease Diagnosis</h3>
+            <p>
+              Automated multimodal triage analyzing patient symptomatology, laboratory blood assays, and clinical histories to detect early-stage pathologies with superhuman speed.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="glass-card intro-card">
+            <div class="intro-icon">
+              <i class="fa-solid fa-x-ray"></i>
+            </div>
+            <h3>Medical Image Analysis</h3>
+            <p>
+              Deep convolutional neural networks and vision transformers segmenting tumors, identifying micro-fractures, and detecting diabetic retinopathy in high-resolution DICOM scans.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="glass-card intro-card">
+            <div class="intro-icon">
+              <i class="fa-solid fa-bed-pulse"></i>
+            </div>
+            <h3>Patient Monitoring</h3>
+            <p>
+              Continuous ICU telemetry and wearable biosensors streaming real-time vitals to predict acute hemodynamic shock, cardiac arrhythmias, and post-surgical deterioration.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="glass-card intro-card">
+            <div class="intro-icon">
+              <i class="fa-solid fa-prescription-bottle-medical"></i>
+            </div>
+            <h3>Treatment Recommendations</h3>
+            <p>
+              Pharmacogenomic engines suggesting individualized chemotherapy regimens, drug dosage optimizations, and clinical pathway selections tailored to specific molecular targets.
+            </p>
+          </div>
+
+          <!-- Pillar 5 -->
+          <div class="glass-card intro-card">
+            <div class="intro-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>Predictive Healthcare</h3>
+            <p>
+              Population-level risk stratification identifying high-probability hospital readmissions, impending sepsis episodes, and epidemiologic disease outbreak trajectories.
+            </p>
+          </div>
+        </div>
+
+        <!-- Why Ethical AI in Medicine is Vital Callout -->
+        <div class="ethics-callout-card">
+          <div class="ethics-callout-grid">
+            <div>
+              <div class="section-badge" style="background: rgba(139,92,246,0.15); border-color: rgba(139,92,246,0.3); color: var(--color-purple-light);">
+                <i class="fa-solid fa-scale-balanced"></i> The Moral Imperative
+              </div>
+              <h3 style="font-size: 1.85rem; margin-bottom: 1rem;">
+                Why Engineering Ethics is Non-Negotiable in Medicine
+              </h3>
+              <p style="font-size: 1.05rem; line-height: 1.65; color: var(--text-secondary);">
+                In commercial software, an algorithmic failure results in an irrelevant music recommendation. In medical technology, an algorithmic failure results in a missed cancer diagnosis, an omitted emergency intervention, or fatal clinical neglect.
+              </p>
+              <div class="callout-points">
+                <div class="callout-point-item">
+                  <div class="point-icon"><i class="fa-solid fa-check"></i></div>
+                  <div><strong>Upholding Non-Maleficence:</strong> Translating the ancient Hippocratic mandate ("First, do no harm") into objective constraints within loss functions and validation protocols.</div>
+                </div>
+                <div class="callout-point-item">
+                  <div class="point-icon"><i class="fa-solid fa-check"></i></div>
+                  <div><strong>Preventing Harm Amplification:</strong> Ensuring algorithmic speed does not scale historic disparities across millions of vulnerable patients globally.</div>
+                </div>
+                <div class="callout-point-item">
+                  <div class="point-icon"><i class="fa-solid fa-check"></i></div>
+                  <div><strong>Sustaining Clinical Trust:</strong> Guaranteeing that doctors, nurses, and patients can depend on AI diagnostics without fear of hidden demographic blindspots.</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align: center;">
+              <div style="background: var(--bg-card); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-glow); display: inline-block;">
+                <i class="fa-solid fa-user-doctor" style="font-size: 3.5rem; color: var(--color-cyan-light); margin-bottom: 1rem;"></i>
+                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">"Code is Clinical Care"</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 260px; margin: 0 auto;">
+                  The machine learning engineer who writes the data pipeline holds the same moral responsibility as the physician at the bedside.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. What is Dataset Bias? Section
+         ======================================================================== -->
+    <section class="section" id="dataset-bias" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <i class="fa-solid fa-triangle-exclamation"></i> Algorithmic Vulnerability
+          </div>
+          <h2 class="section-title">
+            What is <span class="gradient-text">Dataset Bias</span>?
+          </h2>
+          <p class="section-subtitle">
+            Machine learning models are mathematical mirrors of their training data. When the data reflects omissions, socio-economic divides, or skewed sampling, the AI learns and amplifies those defects as clinical truth.
+          </p>
+        </div>
+
+        <!-- Clear Definition & Prominent Example Box -->
+        <div class="glass-card bias-explanation-card">
+          <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Demystifying Bias in Clinical Data</h3>
+          <p style="font-size: 1.08rem; line-height: 1.7; margin-bottom: 1rem;">
+            Dataset bias occurs when the data used to train an artificial intelligence model does not accurately represent the true diversity of patients who will be treated by that model in real-world clinical practice. If a neural network is shown thousands of examples from one demographic group and almost none from another, it becomes an expert in diagnosing the first group while remaining statistically blind to the second.
+          </p>
+
+          <!-- Core User Required Example Quote Box -->
+          <div class="bias-quote-box">
+            <i class="fa-solid fa-quote-left"></i>
+            "If an AI system is trained mainly using medical images from one country or population, it may produce inaccurate diagnoses for people from other countries or backgrounds."
+          </div>
+
+          <p style="font-size: 1rem; color: var(--text-secondary);">
+            Bias in healthcare is not simply intentional discrimination; it is frequently an artifact of convenience sampling, uneven digital healthcare infrastructure, and historical inequities in medical research participation.
+          </p>
+        </div>
+
+        <!-- 3 Interactive Bias Cards -->
+        <div class="bias-cards-grid">
+          <!-- Card 1: Gender Bias -->
+          <div class="glass-card bias-card">
+            <div class="bias-card-header">
+              <div class="bias-card-icon icon-gender">
+                <i class="fa-solid fa-venus-mars"></i>
+              </div>
+              <div>
+                <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-rose); font-weight: 700;">Demographic Variance</span>
+                <h3 style="font-size: 1.4rem;">Gender Bias</h3>
+              </div>
+            </div>
+
+            <p>
+              Medical research has historically used male cohorts as the default physiological baseline. AI systems trained on this legacy data frequently misdiagnose conditions that present differently in women.
+            </p>
+
+            <div class="bias-illustration-mini">
+              <svg viewBox="0 0 280 80" width="280" height="80">
+                <!-- Comparative Male vs Female Bar -->
+                <text x="10" y="25" fill="#94a3b8" font-size="11" font-family="sans-serif">Male Clinical Data</text>
+                <rect x="10" y="32" width="180" height="10" rx="5" fill="#3b82f6"/>
+                <text x="200" y="41" fill="#3b82f6" font-size="11" font-weight="bold" font-family="sans-serif">72% Data</text>
+
+                <text x="10" y="60" fill="#94a3b8" font-size="11" font-family="sans-serif">Female Clinical Data</text>
+                <rect x="10" y="66" width="70" height="10" rx="5" fill="#f43f5e"/>
+                <text x="90" y="75" fill="#f43f5e" font-size="11" font-weight="bold" font-family="sans-serif">28% Data</text>
+              </svg>
+            </div>
+
+            <div class="bias-example-box">
+              <strong>Clinical Case Example:</strong>
+              Cardiology AI models trained on male chest pain symptoms miss ischemic heart disease in women, who more commonly present with fatigue, nausea, and dyspnea rather than crushing substernal chest pain.
+            </div>
+          </div>
+
+          <!-- Card 2: Age Bias -->
+          <div class="glass-card bias-card">
+            <div class="bias-card-header">
+              <div class="bias-card-icon icon-age">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div>
+                <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-amber); font-weight: 700;">Physiological Variance</span>
+                <h3 style="font-size: 1.4rem;">Age Bias</h3>
+              </div>
+            </div>
+
+            <p>
+              Diagnostic thresholds calibrated on working-age adults (25–60 years) fail when applied to pediatric patients with developing anatomies or geriatric patients with multiple comorbidities.
+            </p>
+
+            <div class="bias-illustration-mini">
+              <svg viewBox="0 0 280 80" width="280" height="80">
+                <!-- Age distribution bell curve -->
+                <path d="M 20 70 Q 70 70, 100 50 Q 140 10, 180 50 Q 210 70, 260 70" stroke="#f59e0b" stroke-width="2.5" fill="none"/>
+                <circle cx="50" cy="68" r="4" fill="#f43f5e"/>
+                <text x="35" y="60" fill="#f43f5e" font-size="10" font-family="sans-serif">&lt;18 yrs</text>
+                <circle cx="140" cy="12" r="5" fill="#10b981"/>
+                <text x="125" y="30" fill="#10b981" font-size="10" font-family="sans-serif">Adult Core</text>
+                <circle cx="230" cy="68" r="4" fill="#f43f5e"/>
+                <text x="215" y="60" fill="#f43f5e" font-size="10" font-family="sans-serif">&gt;75 yrs</text>
+              </svg>
+            </div>
+
+            <div class="bias-example-box">
+              <strong>Clinical Case Example:</strong>
+              ICU predictive sepsis algorithms trained on adults trigger severe false-alarm fatigue in neonatal units because neonates naturally exhibit baseline heart and respiration rates that adult models treat as catastrophic shock.
+            </div>
+          </div>
+
+          <!-- Card 3: Geographic & Ethnic Bias -->
+          <div class="glass-card bias-card">
+            <div class="bias-card-header">
+              <div class="bias-card-icon icon-geo">
+                <i class="fa-solid fa-earth-americas"></i>
+              </div>
+              <div>
+                <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-cyan-light); font-weight: 700;">Global Representation</span>
+                <h3 style="font-size: 1.4rem;">Geographic & Ethnic Bias</h3>
+              </div>
+            </div>
+
+            <p>
+              Over 80% of open-access clinical imaging datasets originate from academic medical centers in the United States, Europe, and coastal China, leaving billions across Africa, Latin America, and South Asia excluded.
+            </p>
+
+            <div class="bias-illustration-mini">
+              <svg viewBox="0 0 280 80" width="280" height="80">
+                <!-- Fitzpatrick Skin Tone Scale -->
+                <rect x="20" y="30" width="35" height="24" rx="4" fill="#f9d4b8" stroke="#ffffff" stroke-width="1"/>
+                <rect x="60" y="30" width="35" height="24" rx="4" fill="#e8b58a"/>
+                <rect x="100" y="30" width="35" height="24" rx="4" fill="#c68a5c"/>
+                <rect x="140" y="30" width="35" height="24" rx="4" fill="#9e613b"/>
+                <rect x="180" y="30" width="35" height="24" rx="4" fill="#6d3d20" stroke="#f43f5e" stroke-width="2"/>
+                <rect x="220" y="30" width="35" height="24" rx="4" fill="#3c2012" stroke="#f43f5e" stroke-width="2"/>
+                <text x="50" y="20" fill="#10b981" font-size="10" font-family="sans-serif">Types I-II (84%)</text>
+                <text x="180" y="20" fill="#f43f5e" font-size="10" font-family="sans-serif">Types V-VI (4%)</text>
+              </svg>
+            </div>
+
+            <div class="bias-example-box">
+              <strong>Clinical Case Example:</strong>
+              Computer vision algorithms for melanoma screening exhibit an error rate 4.8x higher on darker Fitzpatrick skin types (V & VI) because the model was trained almost exclusively on light-skinned European patients.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. Engineering Ethics Section (6 Cards)
+         ======================================================================== -->
+    <section class="section" id="engineering-ethics">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <i class="fa-solid fa-code"></i> Engineering Principles
+          </div>
+          <h2 class="section-title">
+            The Six Pillars of <span class="gradient-text">Engineering Ethics</span>
+          </h2>
+          <p class="section-subtitle">
+            Ethical engineering is not an afterthought or philosophical exercise—it is a concrete system of mathematical metrics, verification checkpoints, and architectural safeguards.
+          </p>
+        </div>
+
+        <div class="ethics-cards-grid">
+          <!-- Card 1: Fairness -->
+          <div class="glass-card ethic-card">
+            <div class="ethic-header">
+              <div class="ethic-icon-box" style="color: var(--color-cyan-light); border-color: rgba(6,182,212,0.3);">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <span class="ethic-num">01</span>
+            </div>
+            <h3>Fairness</h3>
+            <p>
+              Providing equal AI healthcare performance for all populations. Models must be verified for <strong>Equalized Odds</strong> and <strong>Demographic Parity</strong> so that diagnostic sensitivity and specificity do not degrade across protected attributes.
+            </p>
+            <div class="ethic-meta-tag">
+              <span><i class="fa-solid fa-check"></i> Metric: Subgroup Parity &lt;3%</span>
+              <span style="color: var(--color-cyan-light);">Fairlearn / AIF360</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Transparency -->
+          <div class="glass-card ethic-card">
+            <div class="ethic-header">
+              <div class="ethic-icon-box" style="color: var(--color-purple-light); border-color: rgba(139,92,246,0.3);">
+                <i class="fa-solid fa-eye"></i>
+              </div>
+              <span class="ethic-num">02</span>
+            </div>
+            <h3>Transparency</h3>
+            <p>
+              Making AI decisions understandable. Black-box predictions are unacceptable in critical care. Engineers must implement <strong>Grad-CAM saliency maps</strong>, SHAP feature attributions, and comprehensive Model Cards documenting training constraints.
+            </p>
+            <div class="ethic-meta-tag">
+              <span><i class="fa-solid fa-check"></i> Explainable AI (XAI)</span>
+              <span style="color: var(--color-purple-light);">SHAP &amp; Saliency</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Privacy -->
+          <div class="glass-card ethic-card">
+            <div class="ethic-header">
+              <div class="ethic-icon-box" style="color: #3b82f6; border-color: rgba(59,130,246,0.3);">
+                <i class="fa-solid fa-user-shield"></i>
+              </div>
+              <span class="ethic-num">03</span>
+            </div>
+            <h3>Privacy</h3>
+            <p>
+              Protecting sensitive patient information. Enforcing strict de-identification conforming to HIPAA Safe Harbor and GDPR standards. Implementing <strong>Differential Privacy</strong> and <strong>Federated Learning</strong> to train models without centralizing patient records.
+            </p>
+            <div class="ethic-meta-tag">
+              <span><i class="fa-solid fa-check"></i> HIPAA &amp; GDPR Compliant</span>
+              <span style="color: #3b82f6;">Federated Learning</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Accountability -->
+          <div class="glass-card ethic-card">
+            <div class="ethic-header">
+              <div class="ethic-icon-box" style="color: var(--color-emerald); border-color: rgba(16,185,129,0.3);">
+                <i class="fa-solid fa-signature"></i>
+              </div>
+              <span class="ethic-num">04</span>
+            </div>
+            <h3>Accountability</h3>
+            <p>
+              Ensuring developers take responsibility for AI outcomes. Establishing immutable audit logging, version-controlled dataset provenance, clinical trial pre-registration, and well-defined legal liability boundaries between software vendors and clinicians.
+            </p>
+            <div class="ethic-meta-tag">
+              <span><i class="fa-solid fa-check"></i> Immutable Audit Logs</span>
+              <span style="color: var(--color-emerald);">Traceability</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Inclusiveness -->
+          <div class="glass-card ethic-card">
+            <div class="ethic-header">
+              <div class="ethic-icon-box" style="color: var(--color-amber); border-color: rgba(245,158,11,0.3);">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <span class="ethic-num">05</span>
+            </div>
+            <h3>Inclusiveness</h3>
+            <p>
+              Representing diverse populations in datasets. Actively forming international partnerships with community health networks and low-and-middle-income country (LMIC) hospitals to build globally representative benchmark datasets.
+            </p>
+            <div class="ethic-meta-tag">
+              <span><i class="fa-solid fa-check"></i> Multi-Cohort Data</span>
+              <span style="color: var(--color-amber);">Global Representation</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Safety -->
+          <div class="glass-card ethic-card">
+            <div class="ethic-header">
+              <div class="ethic-icon-box" style="color: var(--color-rose); border-color: rgba(244,63,94,0.3);">
+                <i class="fa-solid fa-shield-virus"></i>
+              </div>
+              <span class="ethic-num">06</span>
+            </div>
+            <h3>Safety</h3>
+            <p>
+              Testing AI systems to prevent harmful predictions. Running exhaustive out-of-distribution stress tests, adversarial attacks, and establishing mandatory <strong>Human-in-the-Loop</strong> protocols where AI suggestions can always be overruled by physicians.
+            </p>
+            <div class="ethic-meta-tag">
+              <span><i class="fa-solid fa-check"></i> Human-in-the-Loop</span>
+              <span style="color: var(--color-rose);">Fail-Safe Architecture</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. Global Challenges Section
+         ======================================================================== -->
+    <section class="section" id="global-challenges" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <i class="fa-solid fa-mountain"></i> Real-World Hurdles
+          </div>
+          <h2 class="section-title">
+            Major Challenges in <span class="gradient-text">Global Medical AI</span>
+          </h2>
+          <p class="section-subtitle">
+            Deploying equitable AI across borders is fraught with technical, structural, and geopolitical hurdles. Addressing these challenges requires systemic collaboration between engineers and global health systems.
+          </p>
+        </div>
+
+        <div class="challenges-grid">
+          <!-- Challenge 1 -->
+          <div class="glass-card challenge-card">
+            <div class="challenge-icon"><i class="fa-solid fa-database"></i></div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">1. Unequal Dataset Representation</h3>
+            <p>
+              Clinical machine learning is concentrated in a tiny fraction of global institutions. Patients from Sub-Saharan Africa, rural Latin America, and Indigenous communities are virtually absent from public repositories, creating vast diagnostic blindspots.
+            </p>
+          </div>
+
+          <!-- Challenge 2 -->
+          <div class="glass-card challenge-card">
+            <div class="challenge-icon"><i class="fa-solid fa-hospital"></i></div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">2. Differences in Healthcare Systems</h3>
+            <p>
+              Clinical workflows, lab assay calibrations, and insurance diagnostic codes vary enormously between countries. A model trained on a US privatized fee-for-service EHR cannot generalize seamlessly to a nationalized single-payer system or a rural mobile clinic.
+            </p>
+          </div>
+
+          <!-- Challenge 3 -->
+          <div class="glass-card challenge-card">
+            <div class="challenge-icon"><i class="fa-solid fa-language"></i></div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">3. Language & Cultural Differences</h3>
+            <p>
+              Natural language clinical notes are laden with local medical terminology, dialects, and acronyms. Furthermore, cultural differences in how patients describe symptom severity create severe noise in cross-border clinical NLP models.
+            </p>
+          </div>
+
+          <!-- Challenge 4 -->
+          <div class="glass-card challenge-card">
+            <div class="challenge-icon"><i class="fa-solid fa-toolbox"></i></div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">4. Limited Medical Resources in LMICs</h3>
+            <p>
+              Low-and-middle-income countries often utilize older generation radiology scanners with different image noise profiles and lower resolutions. High-parameter vision models trained on ultra-crisp modern scanners frequently collapse when fed legacy hospital images.
+            </p>
+          </div>
+
+          <!-- Challenge 5 -->
+          <div class="glass-card challenge-card">
+            <div class="challenge-icon"><i class="fa-solid fa-lock"></i></div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">5. Data Privacy & Sovereignty</h3>
+            <p>
+              Exporting patient health records across national borders faces justifiable regulatory barriers (GDPR, national health data acts) to prevent "data colonialism"—the exploitative practice of harvesting data from developing countries without returning clinical benefits.
+            </p>
+          </div>
+
+          <!-- Challenge 6 -->
+          <div class="glass-card challenge-card">
+            <div class="challenge-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">6. Compute & Connectivity Disparities</h3>
+            <p>
+              Cloud-reliant AI models requiring multi-gigabyte GPU instances cannot operate in rural clinics with intermittent electrical power and limited bandwidth, necessitating ultra-efficient edge quantized models.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive Visual Comparison Matrix -->
+        <div class="comparison-container">
+          <div class="comparison-header">
+            <h3 style="font-size: 1.7rem; margin-bottom: 0.5rem;">
+              Global Healthcare Technology Divide: High-Income vs. Resource-Constrained Environments
+            </h3>
+            <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto;">
+              Explore how clinical environments diverge across technical dimensions, and why universal models fail without localization.
+            </p>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div class="comparison-tabs">
+            <button class="tab-btn matrix-tab-btn active" data-category="all">All Dimensions</button>
+            <button class="tab-btn matrix-tab-btn" data-category="data">Data Availability</button>
+            <button class="tab-btn matrix-tab-btn" data-category="hardware">Hardware & Scanners</button>
+            <button class="tab-btn matrix-tab-btn" data-category="workflow">Clinical Workflow</button>
+            <button class="tab-btn matrix-tab-btn" data-category="regulation">Regulation & Oversight</button>
+          </div>
+
+          <!-- Comparison Table -->
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table" aria-label="Comparison of medical AI environments">
+              <thead>
+                <tr>
+                  <th class="table-col-dimension">Dimension</th>
+                  <th class="table-col-hic"><i class="fa-solid fa-city" style="color: var(--color-cyan-light); margin-right: 0.5rem;"></i> High-Income Environments (HIC)</th>
+                  <th class="table-col-lmic"><i class="fa-solid fa-tree" style="color: var(--color-rose); margin-right: 0.5rem;"></i> Resource-Constrained Environments (LMIC)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="matrix-row" data-category="data">
+                  <td class="table-col-dimension">Dataset Origin</td>
+                  <td class="table-col-hic">Represents >80% of published academic AI training and benchmark corpuses.</td>
+                  <td class="table-col-lmic">Accounts for <3% of training data; vast clinical data deserts.</td>
+                </tr>
+                <tr class="matrix-row" data-category="hardware">
+                  <td class="table-col-dimension">Imaging Scanners</td>
+                  <td class="table-col-hic">High-Tesla 3T MRI, 128-slice dual-energy CT, standardized DICOM 3.0.</td>
+                  <td class="table-col-lmic">Older generation 0.5T–1.5T MRI, film digitization, heterogeneous artifact noise.</td>
+                </tr>
+                <tr class="matrix-row" data-category="workflow">
+                  <td class="table-col-dimension">Physician Availability</td>
+                  <td class="table-col-hic">High specialist-to-patient ratio; AI serves as a confirmatory second opinion.</td>
+                  <td class="table-col-lmic">Severe specialist scarcity (1 radiologist per 1M people); AI used for frontline triage.</td>
+                </tr>
+                <tr class="matrix-row" data-category="data">
+                  <td class="table-col-dimension">Disease Prevalence</td>
+                  <td class="table-col-hic">High chronic disease burden (cardiovascular, diabetes, oncological).</td>
+                  <td class="table-col-lmic">Dual burden of infectious diseases (tuberculosis, malaria) alongside chronic conditions.</td>
+                </tr>
+                <tr class="matrix-row" data-category="regulation">
+                  <td class="table-col-dimension">Regulatory Bodies</td>
+                  <td class="table-col-hic">FDA SaMD, EU AI Act High-Risk, CE Mark Medical Class IIa/IIb.</td>
+                  <td class="table-col-lmic">Fragmented or nascent AI regulatory bodies; high dependence on WHO guidance.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. Ethical Solutions & Interactive Workflow Section
+         ======================================================================== -->
+    <section class="section" id="ethical-solutions">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <i class="fa-solid fa-lightbulb"></i> Actionable Roadmap
+          </div>
+          <h2 class="section-title">
+            Practical <span class="gradient-text">Ethical Solutions</span>
+          </h2>
+          <p class="section-subtitle">
+            Preventing dataset bias requires systematic engineering interventions across every stage of the machine learning lifecycle, from curation to post-market monitoring.
+          </p>
+        </div>
+
+        <!-- Practical Solutions Grid -->
+        <div class="solutions-grid">
+          <div class="glass-card solution-card">
+            <div class="solution-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem;">Multi-Center Data Harvesting</h3>
+              <p style="font-size: 0.95rem;">
+                Form federated data coalitions across multi-continent health networks to collect medical records that authentically mirror global genetic and demographic diversity.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card solution-card">
+            <div class="solution-icon"><i class="fa-solid fa-venus-mars"></i></div>
+            <div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem;">Balanced Stratification</h3>
+              <p style="font-size: 0.95rem;">
+                Mandate minimum statistical power quotas for underrepresented age brackets, biological sexes, and skin tone classifications before model training commences.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card solution-card">
+            <div class="solution-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem;">Disaggregated Bias Audits</h3>
+              <p style="font-size: 0.95rem;">
+                Abandon aggregate benchmark scores. Test algorithms across disaggregated demographic slices, calculating False Negative Rates and Equalized Odds parity.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card solution-card">
+            <div class="solution-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+            <div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem;">International Standards</h3>
+              <p style="font-size: 0.95rem;">
+                Adhere to the World Health Organization (WHO) Guidance on Ethics and Governance of AI for Health and the IEEE 7000 Series for ethically aligned system design.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card solution-card">
+            <div class="solution-icon"><i class="fa-solid fa-people-group"></i></div>
+            <div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem;">Multidisciplinary Oversight</h3>
+              <p style="font-size: 0.95rem;">
+                Pair software architects with practicing clinicians, bioethicists, medical sociologists, and patient advocates on formal Algorithmic Review Boards.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card solution-card">
+            <div class="solution-icon"><i class="fa-solid fa-chart-line-up"></i></div>
+            <div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem;">Post-Market Surveillance</h3>
+              <p style="font-size: 0.95rem;">
+                Deploy continuous real-time algorithmic drift monitoring in production EHRs to catch demographic performance decay and real-world distribution shifts.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Visual Workflow Diagram -->
+        <div class="workflow-section-wrapper">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <div class="section-badge" style="background: rgba(16,185,129,0.12); color: var(--color-emerald); border-color: rgba(16,185,129,0.3);">
+              <i class="fa-solid fa-diagram-project"></i> Interactive Lifecycle Diagram
+            </div>
+            <h3 style="font-size: 1.85rem; margin-bottom: 0.5rem;">
+              The Ethical Medical AI Development Pipeline
+            </h3>
+            <p style="color: var(--text-secondary); font-size: 0.98rem;">
+              Click on each phase below to inspect the engineering tasks, validation checkpoints, and debiasing tools.
+            </p>
+          </div>
+
+          <!-- Workflow Track -->
+          <div class="workflow-track" role="tablist" aria-label="Medical AI development phases">
+            <!-- Node 1 -->
+            <button class="workflow-node active" role="tab" aria-selected="true" data-index="0">
+              <div class="node-circle"><i class="fa-solid fa-folder-open"></i></div>
+              <span class="node-title">1. Data Collection</span>
+            </button>
+
+            <!-- Node 2 -->
+            <button class="workflow-node" role="tab" aria-selected="false" data-index="1">
+              <div class="node-circle"><i class="fa-solid fa-filter-circle-dollar"></i></div>
+              <span class="node-title">2. Diversity Check</span>
+            </button>
+
+            <!-- Node 3 -->
+            <button class="workflow-node" role="tab" aria-selected="false" data-index="2">
+              <div class="node-circle"><i class="fa-solid fa-microchip"></i></div>
+              <span class="node-title">3. Model Training</span>
+            </button>
+
+            <!-- Node 4 -->
+            <button class="workflow-node" role="tab" aria-selected="false" data-index="3">
+              <div class="node-circle"><i class="fa-solid fa-flask-vial"></i></div>
+              <span class="node-title">4. Bias Testing</span>
+            </button>
+
+            <!-- Node 5 -->
+            <button class="workflow-node" role="tab" aria-selected="false" data-index="4">
+              <div class="node-circle"><i class="fa-solid fa-stamp"></i></div>
+              <span class="node-title">5. Ethical Validation</span>
+            </button>
+
+            <!-- Node 6 -->
+            <button class="workflow-node" role="tab" aria-selected="false" data-index="5">
+              <div class="node-circle"><i class="fa-solid fa-heart-circle-check"></i></div>
+              <span class="node-title">6. Fair Medical AI</span>
+            </button>
+          </div>
+
+          <!-- Active Step Detail Box -->
+          <div class="workflow-detail-box" id="workflow-detail-panel">
+            <div class="workflow-detail-header">
+              <span class="workflow-badge-step" id="workflow-step-badge">Step 1 of 6</span>
+              <span style="font-size: 0.85rem; color: var(--color-cyan-light); font-weight: 600;" id="workflow-step-tools">Tools: Federated Learning Consortia</span>
+            </div>
+            <h4 style="font-size: 1.45rem; margin-bottom: 0.75rem;" id="workflow-step-title">
+              Global Data Collection &amp; Multi-Center Consortiums
+            </h4>
+            <p style="font-size: 1rem; line-height: 1.65; color: var(--text-secondary); margin-bottom: 1.25rem;" id="workflow-step-desc">
+              Form data-sharing alliances across diverse geographical hospitals, ensuring patient cohorts include multiple ethnicities, age brackets, genders, and socioeconomic backgrounds.
+            </p>
+            <div style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-bright); margin-bottom: 0.5rem;">
+              Phase Checkpoints:
+            </div>
+            <ul id="workflow-step-checkpoints" style="margin-left: 0.25rem;">
+              <!-- Populated dynamically via main.js -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         9. Real-World Case Studies Section
+         ======================================================================== -->
+    <section class="section" id="case-studies" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <i class="fa-solid fa-book-medical"></i> Clinical Precedents
+          </div>
+          <h2 class="section-title">
+            Real-World <span class="gradient-text">Case Studies</span>
+          </h2>
+          <p class="section-subtitle">
+            Examining documented failures and near-misses in healthcare AI provides crucial engineering lessons. Each case study details the clinical problem, the ethical concern, and the engineering remedy.
+          </p>
+        </div>
+
+        <div class="cases-grid">
+          <!-- Case Study 1 -->
+          <div class="glass-card case-card">
+            <span class="case-badge-academic">
+              <i class="fa-solid fa-graduation-cap"></i> Documented Academic Precedent
+            </span>
+            <h3 class="case-title">Dermatology AI &amp; Fitzpatrick Skin Tone Representation</h3>
+
+            <div class="case-sections-list">
+              <div class="case-item-block case-problem">
+                <div class="case-item-title" style="color: var(--color-rose);">
+                  <i class="fa-solid fa-triangle-exclamation"></i> The Problem
+                </div>
+                <p>
+                  Major computer vision models for melanoma classification were trained on public image repositories (such as early ISIC benchmarks) where over 85% of biopsy images came from light-skinned patients (Fitzpatrick I–II).
+                </p>
+              </div>
+
+              <div class="case-item-block case-concern">
+                <div class="case-item-title" style="color: var(--color-amber);">
+                  <i class="fa-solid fa-scale-balanced"></i> Ethical &amp; Clinical Concern
+                </div>
+                <p>
+                  Melanoma in darker skin frequently manifests in atypical anatomical sites (acral lentiginous melanoma on palms, soles, and nailbeds). The AI's sensitivity on darker skin dropped precipitously, risking missed malignant diagnoses and fatal clinical delays.
+                </p>
+              </div>
+
+              <div class="case-item-block case-solution">
+                <div class="case-item-title" style="color: var(--color-emerald);">
+                  <i class="fa-solid fa-wrench"></i> Engineering Solution
+                </div>
+                <p>
+                  Curating multi-tone benchmark datasets (e.g., Fitzpatrick 17k), synthesizing physics-based melanin variations during data augmentation, and mandating subgroup equalized odds testing prior to clinical CE/FDA submission.
+                </p>
+              </div>
+            </div>
+
+            <div class="case-citation">
+              <strong>Academic Reference:</strong> Buolamwini &amp; Gebru (2018), <em>Gender Shades</em>; Groh et al. (2021), <em>Evaluating Deep Neural Networks on a Diverse Dataset of Skin Lesions</em>.
+            </div>
+          </div>
+
+          <!-- Case Study 2 -->
+          <div class="glass-card case-card">
+            <span class="case-badge-academic">
+              <i class="fa-solid fa-graduation-cap"></i> Landmark Science Study
+            </span>
+            <h3 class="case-title">Healthcare Risk Scoring &amp; Spending Proxy Bias</h3>
+
+            <div class="case-sections-list">
+              <div class="case-item-block case-problem">
+                <div class="case-item-title" style="color: var(--color-rose);">
+                  <i class="fa-solid fa-triangle-exclamation"></i> The Problem
+                </div>
+                <p>
+                  A commercial algorithm used by US health systems to allocate high-touch care management programs utilized historical healthcare spending as a numerical proxy for illness severity and healthcare need.
+                </p>
+              </div>
+
+              <div class="case-item-block case-concern">
+                <div class="case-item-title" style="color: var(--color-amber);">
+                  <i class="fa-solid fa-scale-balanced"></i> Ethical &amp; Clinical Concern
+                </div>
+                <p>
+                  Because systemic economic and insurance barriers resulted in lower healthcare spending on Black patients compared to white patients with identical morbidity, the algorithm assigned Black patients dramatically lower risk scores, excluding thousands from critical medical outreach.
+                </p>
+              </div>
+
+              <div class="case-item-block case-solution">
+                <div class="case-item-title" style="color: var(--color-emerald);">
+                  <i class="fa-solid fa-wrench"></i> Engineering Solution
+                </div>
+                <p>
+                  Replacing the biased financial proxy (dollars spent) with direct clinical objective targets (count of active chronic conditions, laboratory biomarkers, emergency visits), immediately eliminating the algorithmic racial gap.
+                </p>
+              </div>
+            </div>
+
+            <div class="case-citation">
+              <strong>Academic Reference:</strong> Obermeyer et al. (2019), <em>"Dissecting racial bias in an algorithm used to manage the health of populations"</em>, <strong>Science</strong> 366(6464):447–453.
+            </div>
+          </div>
+
+          <!-- Case Study 3 -->
+          <div class="glass-card case-card">
+            <span class="case-badge-academic">
+              <i class="fa-solid fa-graduation-cap"></i> Documented Radiology Research
+            </span>
+            <h3 class="case-title">Chest Radiograph AI &amp; Demographic Underdiagnosis</h3>
+
+            <div class="case-sections-list">
+              <div class="case-item-block case-problem">
+                <div class="case-item-title" style="color: var(--color-rose);">
+                  <i class="fa-solid fa-triangle-exclamation"></i> The Problem
+                </div>
+                <p>
+                  Deep learning classifiers trained on large public chest X-ray datasets (MIMIC-CXR, CheXpert) were found to learn hidden statistical correlations that accurately predicted patient self-reported race, biological sex, and insurance status directly from radiograph pixels.
+                </p>
+              </div>
+
+              <div class="case-item-block case-concern">
+                <div class="case-item-title" style="color: var(--color-amber);">
+                  <i class="fa-solid fa-scale-balanced"></i> Ethical &amp; Clinical Concern
+                </div>
+                <p>
+                  The models exhibited statistically significant higher false-negative rates for female, younger, and low-income patients for conditions like pneumothorax and cardiomegaly, risking untreated pulmonary collapse.
+                </p>
+              </div>
+
+              <div class="case-item-block case-solution">
+                <div class="case-item-title" style="color: var(--color-emerald);">
+                  <i class="fa-solid fa-wrench"></i> Engineering Solution
+                </div>
+                <p>
+                  Implementing adversarial debiasing layers during model backpropagation to strip demographic feature vectors, and performing multi-site external validation across PadChest and community hospital datasets.
+                </p>
+              </div>
+            </div>
+
+            <div class="case-citation">
+              <strong>Academic Reference:</strong> Seyyed-Kalantari et al. (2021), <em>"Underdiagnosis bias of artificial intelligence algorithms applied to chest radiographs in under-served patient populations"</em>, <strong>Nature Medicine</strong> 27:2176–2182.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         10. Interactive Features: Simulator, Charts & Quiz
+         ======================================================================== -->
+    <section class="section interactive-section" id="fairness-simulator">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <i class="fa-solid fa-flask"></i> Interactive Laboratory
+          </div>
+          <h2 class="section-title">
+            AI Fairness <span class="gradient-text">Demonstration Simulator</span>
+          </h2>
+          <p class="section-subtitle">
+            Experience first-hand how dataset distribution, decision thresholds, and debiasing algorithms directly dictate diagnostic equity between patient cohorts.
+          </p>
+        </div>
+
+        <!-- Simulator Core -->
+        <div class="simulator-wrapper">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.25rem;">
+            <div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">Live Clinical Model Emulator</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary);">
+                Comparing <strong>Group A</strong> (Majority / Well-Represented Cohort) vs. <strong>Group B</strong> (Historically Underrepresented Cohort).
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+              <span class="section-badge" style="margin: 0; background: rgba(6,182,212,0.15); color: var(--color-cyan-light);">
+                <i class="fa-solid fa-circle-nodes"></i> Real-Time Inference
+              </span>
+            </div>
+          </div>
+
+          <div class="simulator-grid">
+            <!-- Simulator Controls -->
+            <div class="sim-controls">
+              <!-- Control 1: Diversity Balance Slider -->
+              <div class="control-group">
+                <div class="control-label-row">
+                  <label for="sim-diversity">
+                    <i class="fa-solid fa-users-viewfinder" style="color: var(--color-cyan-light); margin-right: 0.4rem;"></i>
+                    Training Dataset Diversity Balance
+                  </label>
+                  <span class="control-val-badge" id="sim-diversity-val">10% (Group B Share)</span>
+                </div>
+                <input type="range" id="sim-diversity" class="sim-slider" min="10" max="50" step="5" value="10" aria-label="Dataset diversity slider">
+                <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-muted);">
+                  <span>10% (Skewed / Exclusionary)</span>
+                  <span>30% (Moderate)</span>
+                  <span>50% (Equally Balanced)</span>
+                </div>
+              </div>
+
+              <!-- Control 2: Mitigation Algorithm Selector -->
+              <div class="control-group">
+                <div class="control-label-row">
+                  <label for="sim-mitigation">
+                    <i class="fa-solid fa-sliders" style="color: var(--color-purple-light); margin-right: 0.4rem;"></i>
+                    Algorithmic Fairness Mitigation
+                  </label>
+                </div>
+                <select id="sim-mitigation" class="sim-select" aria-label="Select fairness mitigation method">
+                  <option value="none">None (Standard Empirical Risk Minimization)</option>
+                  <option value="reweighting">Sample Reweighting (Inverse Probability)</option>
+                  <option value="adversarial">Adversarial Demographic Debiasing</option>
+                  <option value="equalized_odds">Equalized Odds Post-Processing</option>
+                </select>
+                <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
+                  Mitigation algorithms penalize group performance gaps during training and decision boundary calibration.
+                </div>
+              </div>
+
+              <!-- Control 3: Clinical Decision Threshold -->
+              <div class="control-group">
+                <div class="control-label-row">
+                  <label for="sim-threshold">
+                    <i class="fa-solid fa-gauge" style="color: var(--color-emerald); margin-right: 0.4rem;"></i>
+                    Diagnostic Decision Threshold
+                  </label>
+                  <span class="control-val-badge" id="sim-threshold-val">0.50</span>
+                </div>
+                <input type="range" id="sim-threshold" class="sim-slider" min="0.20" max="0.80" step="0.05" value="0.50" aria-label="Decision threshold slider">
+                <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-muted);">
+                  <span>0.20 (High Sensitivity / Catch All)</span>
+                  <span>0.50 (Default)</span>
+                  <span>0.80 (High Specificity)</span>
+                </div>
+              </div>
+
+              <!-- Synthetic Confusion Matrix Summary -->
+              <div style="background: rgba(0,0,0,0.2); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+                <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.75rem;">
+                  Simulated Cohort Confusion Matrix (per 1,000 patients)
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; font-size: 0.85rem;">
+                  <div style="padding: 0.6rem; background: var(--bg-card); border-radius: 6px;">
+                    <span style="color: var(--color-cyan-light); font-weight: 600;">Group A (Majority):</span><br>
+                    True Positives: <strong id="cm-a-tp">960</strong><br>
+                    Missed (FN): <strong id="cm-a-fn" style="color: var(--color-rose);">40</strong>
+                  </div>
+                  <div style="padding: 0.6rem; background: var(--bg-card); border-radius: 6px;">
+                    <span style="color: var(--color-purple-light); font-weight: 600;">Group B (Minority):</span><br>
+                    True Positives: <strong id="cm-b-tp">640</strong><br>
+                    Missed (FN): <strong id="cm-b-fn" style="color: var(--color-rose);">360</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Simulator Outputs & Visual Gauges -->
+            <div class="sim-outputs">
+              <!-- Parity Status Banner -->
+              <div id="sim-parity-banner" class="parity-banner">
+                <span id="sim-parity-status">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                  <strong>Critical Bias Hazard:</strong> High disparity gap. High False Negative rate in Group B.
+                </span>
+              </div>
+
+              <!-- Summary Metric Cards -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div style="background: rgba(0,0,0,0.25); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">Aggregate Accuracy</div>
+                  <div id="sim-overall-acc" style="font-size: 2.2rem; font-weight: 800; color: #ffffff;">93.4%</div>
+                  <div style="font-size: 0.75rem; color: var(--color-rose); font-weight: 500;">Masks severe subgroup disparity!</div>
+                </div>
+
+                <div style="background: rgba(0,0,0,0.25); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">Fairness Parity Gap</div>
+                  <div id="sim-parity-gap" style="font-size: 2.2rem; font-weight: 800; color: var(--color-amber);">32.3%</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Delta (|Acc A - Acc B|)</div>
+                </div>
+              </div>
+
+              <!-- Detailed Cohort Comparison -->
+              <div class="groups-comparison-grid">
+                <!-- Group A Card -->
+                <div class="group-stat-card">
+                  <div class="group-tag" style="color: var(--color-cyan-light);">
+                    <i class="fa-solid fa-circle-user"></i> Group A (Majority)
+                  </div>
+
+                  <div class="gauge-row">
+                    <div class="gauge-label">
+                      <span>Diagnostic Accuracy:</span>
+                      <strong id="group-a-acc">96.8%</strong>
+                    </div>
+                    <div class="gauge-track">
+                      <div id="group-a-fill" class="gauge-fill" style="width: 96.8%; background: var(--color-cyan);"></div>
+                    </div>
+                  </div>
+
+                  <div class="gauge-row">
+                    <div class="gauge-label">
+                      <span style="color: var(--text-muted);">False Negative Rate (Missed):</span>
+                      <strong id="group-a-fnr" style="color: var(--color-emerald);">4.2%</strong>
+                    </div>
+                    <div class="gauge-track">
+                      <div id="group-a-fnr-fill" class="gauge-fill" style="width: 8.4%; background: var(--color-emerald);"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Group B Card -->
+                <div class="group-stat-card">
+                  <div class="group-tag" style="color: var(--color-purple-light);">
+                    <i class="fa-solid fa-circle-user"></i> Group B (Underrepresented)
+                  </div>
+
+                  <div class="gauge-row">
+                    <div class="gauge-label">
+                      <span>Diagnostic Accuracy:</span>
+                      <strong id="group-b-acc">64.5%</strong>
+                    </div>
+                    <div class="gauge-track">
+                      <div id="group-b-fill" class="gauge-fill" style="width: 64.5%; background: var(--color-rose);"></div>
+                    </div>
+                  </div>
+
+                  <div class="gauge-row">
+                    <div class="gauge-label">
+                      <span style="color: var(--color-rose);">False Negative Rate (Missed):</span>
+                      <strong id="group-b-fnr" style="color: var(--color-rose);">37.0%</strong>
+                    </div>
+                    <div class="gauge-track">
+                      <div id="group-b-fnr-fill" class="gauge-fill" style="width: 74%; background: var(--color-rose);"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+                <i class="fa-solid fa-lightbulb" style="color: var(--color-cyan-light); margin-right: 0.35rem;"></i>
+                <strong>Try this:</strong> Slide <em>Dataset Diversity</em> to <strong>50%</strong> and select <strong>Equalized Odds Post-Processing</strong>. Notice how the Fairness Parity Gap shrinks below 2% while Group B's False Negative rate drops dramatically.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Animated Charts Grid -->
+        <div class="charts-grid">
+          <!-- Chart 1: Global Data Distribution -->
+          <div class="glass-card chart-card">
+            <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+              <div>
+                <span class="section-badge" style="font-size: 0.75rem; margin-bottom: 0.5rem;">
+                  <i class="fa-solid fa-chart-pie"></i> Geographic Skew
+                </span>
+                <h3 style="font-size: 1.35rem;">Global AI Training Data Origin</h3>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.4rem;">
+              Percentage breakdown of patient imaging and clinical datasets deposited in publicly accessible AI research repositories worldwide.
+            </p>
+            <div class="chart-container-inner">
+              <canvas id="geoDistChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart 2: Parity Improvement -->
+          <div class="glass-card chart-card">
+            <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+              <div>
+                <span class="section-badge" style="font-size: 0.75rem; margin-bottom: 0.5rem; background: rgba(16,185,129,0.15); color: var(--color-emerald); border-color: rgba(16,185,129,0.3);">
+                  <i class="fa-solid fa-chart-column"></i> Parity Verification
+                </span>
+                <h3 style="font-size: 1.35rem;">Accuracy: Baseline vs. Debiased AI</h3>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.4rem;">
+              Diagnostic accuracy across skin tone and demographic cohorts showing dramatic parity improvement with ethically balanced training datasets.
+            </p>
+            <div class="chart-container-inner">
+              <canvas id="parityCompareChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Dataset Bias Awareness Quiz -->
+        <div class="quiz-wrapper" id="ethics-quiz">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.75rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.25rem;">
+            <div>
+              <div class="section-badge" style="margin-bottom: 0.5rem; background: rgba(139,92,246,0.15); color: var(--color-purple-light); border-color: rgba(139,92,246,0.3);">
+                <i class="fa-solid fa-graduation-cap"></i> Interactive Assessment
+              </div>
+              <h3 style="font-size: 1.65rem;">Dataset Bias Awareness Quiz</h3>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1.5rem;">
+              <span id="quiz-counter" style="font-size: 0.9rem; color: var(--color-cyan-light); font-weight: 700;">Question 1 of 5</span>
+              <span id="quiz-score-display" class="section-badge" style="margin: 0; background: rgba(6,182,212,0.15); color: var(--color-cyan-light);">Score: 0</span>
+            </div>
+          </div>
+
+          <div class="quiz-card">
+            <h4 class="quiz-question-text" id="quiz-question">
+              <!-- Dynamically populated via quiz.js -->
+            </h4>
+
+            <div class="quiz-options-list" id="quiz-options" role="radiogroup">
+              <!-- Populated via quiz.js -->
+            </div>
+
+            <!-- Instant Explanation Callout -->
+            <div class="quiz-explanation-box" id="quiz-explanation">
+              <!-- Populated via quiz.js -->
+            </div>
+
+            <div class="quiz-footer">
+              <div style="font-size: 0.85rem; color: var(--text-muted);">
+                <i class="fa-solid fa-circle-info"></i> Instant feedback and engineering rationale provided per question.
+              </div>
+              <button id="quiz-next-btn" class="btn btn-primary" style="display: none;">
+                Next Question <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         11. Conclusion & Final Statement
+         ======================================================================== -->
+    <section class="section conclusion-section" id="conclusion">
+      <div class="container">
+        <div class="conclusion-card">
+          <div class="section-badge" style="margin-bottom: 1.5rem; background: rgba(6,182,212,0.15); color: var(--color-cyan-light); border-color: rgba(6,182,212,0.3);">
+            <i class="fa-solid fa-flag-checkered"></i> The Path Forward
+          </div>
+
+          <!-- Required User Final Message -->
+          <blockquote class="conclusion-quote">
+            "Engineering ethics is the foundation of fair and responsible medical AI. By preventing dataset bias, we can build healthcare technologies that serve everyone equally, regardless of gender, age, ethnicity, or geographical location."
+          </blockquote>
+
+          <!-- Required User Highlight Statement -->
+          <div class="conclusion-highlight-banner">
+            <i class="fa-solid fa-hands-holding-circle" style="margin-right: 0.5rem;"></i>
+            "Fair AI for All – Ethical Healthcare for a Better Global Future."
+          </div>
+
+          <!-- Ethical Engineer's 4 Core Commitments -->
+          <div class="pledge-cards-grid">
+            <div class="glass-card pledge-card">
+              <div class="pledge-icon"><i class="fa-solid fa-microscope"></i></div>
+              <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Audit Every Dataset</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                Never train clinical models on unstratified datasets without publishing comprehensive demographic distribution datasheets.
+              </p>
+            </div>
+
+            <div class="glass-card pledge-card">
+              <div class="pledge-icon"><i class="fa-solid fa-chart-column"></i></div>
+              <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Measure Disaggregated Parity</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                Refuse to validate models based solely on aggregate metrics; mandate subgroup false-negative rate parity audits.
+              </p>
+            </div>
+
+            <div class="glass-card pledge-card">
+              <div class="pledge-icon"><i class="fa-solid fa-earth-africa"></i></div>
+              <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Combat Data Colonialism</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                Partner with local clinicians in the Global South through federated learning, ensuring diagnostic benefits return to origin communities.
+              </p>
+            </div>
+
+            <div class="glass-card pledge-card">
+              <div class="pledge-icon"><i class="fa-solid fa-user-doctor"></i></div>
+              <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Preserve Clinical Agency</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                Maintain human-in-the-loop clinical autonomy, transparent explainability heatmaps, and doctor override mechanisms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       12. Footer
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: About the Project -->
+        <div class="footer-col-about">
+          <div class="logo" style="margin-bottom: 0.5rem;">
+            <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div class="logo-text">
+              <span>ETHICAL MED-AI</span>
+              <span>Global Healthcare Ethics</span>
+            </div>
+          </div>
+          <p>
+            An educational initiative dedicated to advancing engineering ethics, algorithmic fairness, and demographic inclusivity in global clinical artificial intelligence development. Designed for engineering students, biomedical researchers, and healthcare professionals.
+          </p>
+        </div>
+
+        <!-- Col 2: Key Topics -->
+        <div>
+          <h4 class="footer-heading">Key Topics</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#introduction"><i class="fa-solid fa-angle-right"></i> Clinical AI Transformation</a></li>
+            <li class="footer-link-item"><a href="#dataset-bias"><i class="fa-solid fa-angle-right"></i> What is Dataset Bias?</a></li>
+            <li class="footer-link-item"><a href="#engineering-ethics"><i class="fa-solid fa-angle-right"></i> 6 Pillars of Engineering Ethics</a></li>
+            <li class="footer-link-item"><a href="#global-challenges"><i class="fa-solid fa-angle-right"></i> Global Healthcare Challenges</a></li>
+            <li class="footer-link-item"><a href="#ethical-solutions"><i class="fa-solid fa-angle-right"></i> 6-Step Ethical Lifecycle</a></li>
+            <li class="footer-link-item"><a href="#case-studies"><i class="fa-solid fa-angle-right"></i> Real-World Case Studies</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Interactive Tools -->
+        <div>
+          <h4 class="footer-heading">Interactive Tools</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#fairness-simulator"><i class="fa-solid fa-sliders"></i> AI Fairness Simulator</a></li>
+            <li class="footer-link-item"><a href="#geoDistChart"><i class="fa-solid fa-chart-pie"></i> Global Data Origin Chart</a></li>
+            <li class="footer-link-item"><a href="#parityCompareChart"><i class="fa-solid fa-chart-column"></i> Parity Comparison Chart</a></li>
+            <li class="footer-link-item"><a href="#ethics-quiz"><i class="fa-solid fa-clipboard-question"></i> Bias Awareness Quiz</a></li>
+            <li class="footer-link-item"><a href="#conclusion"><i class="fa-solid fa-award"></i> The Engineer's Commitment</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Ethical AI Awareness & Standards -->
+        <div>
+          <h4 class="footer-heading">Ethical AI Frameworks</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item">
+              <span style="color: var(--color-cyan-light);"><i class="fa-solid fa-bookmark"></i> WHO Guidance:</span>
+              <span style="font-size: 0.85rem;">Ethics &amp; Governance of AI for Health</span>
+            </li>
+            <li class="footer-link-item">
+              <span style="color: var(--color-purple-light);"><i class="fa-solid fa-bookmark"></i> IEEE Standards:</span>
+              <span style="font-size: 0.85rem;">IEEE P7000 Ethical System Design</span>
+            </li>
+            <li class="footer-link-item">
+              <span style="color: var(--color-emerald);"><i class="fa-solid fa-bookmark"></i> UNESCO:</span>
+              <span style="font-size: 0.85rem;">Recommendation on the Ethics of AI</span>
+            </li>
+            <li class="footer-link-item">
+              <span style="color: #3b82f6;"><i class="fa-solid fa-bookmark"></i> European Union:</span>
+              <span style="font-size: 0.85rem;">EU AI Act (High-Risk Medical Systems)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 ETHICAL MED-AI Initiative. Developed for College Engineering Demonstration &amp; Global Healthcare Equity Education.
+        </div>
+        <div style="display: flex; gap: 1.5rem; font-size: 0.85rem;">
+          <span>Open Educational Resource (OER)</span>
+          <span>•</span>
+          <span>Adheres to Fair ML Guidelines</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top" title="Scroll to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- External Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Application Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/fairness-simulator.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/charts.js"></script>
+</body>
+</html>
